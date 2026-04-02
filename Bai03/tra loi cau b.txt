@@ -1,3 +1,0 @@
-Trạng thái: brand, isPowerOn, speedLevel.
-Hành vi: turnOn, turnOff, setSpeed(int).
-Định danh: livingRoomFan, bedroomFan

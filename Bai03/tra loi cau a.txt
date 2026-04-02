@@ -1,5 +1,0 @@
-Trạng thái: accountNumber, ownerName, balance.
-Hành vi: openAccount(String, String)
-	 deposit(double)
-	 withdraw(double)
-Định danh: myAccount, hisAccount.
