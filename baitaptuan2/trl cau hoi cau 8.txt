@@ -1,0 +1,6 @@
+1. Sau khi setMe(p), chỉ có 1 đối tượng Person trong bộ nhớ. Sau khi ta tạo 1 obj, p lưu giữ địa chỉ của obj đó trong bộ nhớ. Khi ta gọi p.setMe(p), nó làm cho thuộc tính me trỏ lại về đúng chính nó. Nên là vẫn chỉ có 1 obj Person duy nhất trong bộ nhớ.
+
+2.Không, p sẽ không bị xoá ngay lập tức khi ta gọi p = null. Việc gọi p = null chỉ cho rằng biến tham chiếu p sẽ không trỏ đến obj Person ban đầu nữa, chứ không phải xoá luôn obj Person. Garbage Collection sẽ tự động tìm kiếm các obj không còn được trỏ đến từ các biến tham chiếu đang hoạt động, và sau đó sẽ thu hồi các obj này vào 1 thời điểm thích hợp nào đó (không nhất thiết là ngay sau khi ta gọi p = null).
+Việc ta đang có thuộc tính me vẫn đang trỏ vào obj Person này không giải quyết được vấn đề gì, nó chỉ là obj này vẫn đang trỏ về chính nó. Hệ thống Garbage Collection không xét xem obj này có đang trỏ vào cái gì không, mà chỉ xét xem có còn biến tham chiếu đang hoạt động nào trỏ tới obj này không.
+
+3.Khi ta gọi p = null ta đã vô tình làm mất đi đường truy cập duy nhất cho các biến bên ngoài vào obj, chỉ còn duy nhất me trong chính obj này còn đường truy cập đó, nhưng ta đã không thể truy cập vào obj này nên cũng k thể tham chiếu đến me. Vậy nên ta không thể truy cập lại được đối tượng Person này nữa.
